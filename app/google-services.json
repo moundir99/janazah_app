@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "85183173498",
+    "firebase_url": "https://janazahapp.firebaseio.com",
+    "project_id": "janazahapp",
+    "storage_bucket": "janazahapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85183173498:android:476f5545ecc4e59ea1fcc3",
+        "android_client_info": {
+          "package_name": "com.example.janazahapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85183173498-suttlcjlbhomtijissk55edpjn35s4fu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.janazahapp",
+            "certificate_hash": "801ba25460938958205b0b0f9a8110b7f1d2f30b"
+          }
+        },
+        {
+          "client_id": "85183173498-lvi9u0arvqj6shnis34ri0p02vf5tq85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNdScOnKfOHQ8IS5zuxiJwQs7FiIpbAVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85183173498-lvi9u0arvqj6shnis34ri0p02vf5tq85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
