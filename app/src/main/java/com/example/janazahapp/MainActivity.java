@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MainActivity.this,"Sign up unseccessful, please try again!",Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                startActivity(new Intent(MainActivity.this,prayers.class));
+                                startActivity(new Intent(MainActivity.this, CreateEvent.class));
                             }
                         }
                     });

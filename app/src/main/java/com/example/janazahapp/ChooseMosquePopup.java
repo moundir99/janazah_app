@@ -10,7 +10,7 @@ public class ChooseMosquePopup extends Dialog {
     //constructor
     public ChooseMosquePopup(Activity activity){
         super(activity,R.style.Theme_AppCompat_DayNight_NoActionBar);
-        setContentView(R.layout.choose_mosque_popup);
+        setContentView(R.layout.acivity_maps);
         this.title1="Choose a mosque to pray in";
         this.titleView=findViewById(R.id.title);
     }

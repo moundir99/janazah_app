@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
-public class navbar extends Fragment {
+public class Navbar extends Fragment {
     private ActionBar toolbar;
 
     @Nullable
@@ -37,15 +37,15 @@ public class navbar extends Fragment {
             switch (item.getItemId()) {
                 case R.id.createEvent:
                     Log.d("DEBUG", "vous etes dans create event");
-                    Intent intoCreate=new Intent(getActivity() ,createEvent.class);
+                    Intent intoCreate=new Intent(getActivity() , CreateEvent.class);
                     startActivity(intoCreate);
                     return true;
                 case R.id.prayers:
-                    Intent intoPrayers=new Intent(getActivity() ,prayers.class);
+                    Intent intoPrayers=new Intent(getActivity() , PrayersEvents.class);
                     startActivity(intoPrayers);
                     return true;
                 case R.id.profile:
-                    Intent intoProfile=new Intent(getActivity() ,profile.class);
+                    Intent intoProfile=new Intent(getActivity() , Profile.class);
                     startActivity(intoProfile);
                     return true;
             }

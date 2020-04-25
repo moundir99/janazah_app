@@ -36,7 +36,6 @@ public class LoginActivity extends AppCompatActivity {
 
     //POUR L'AUTHENTIFICATION GOOGLE
     GoogleSignInClient mGoogleSignInClient;
-
     SignInButton signInButton;
 
     @Override
@@ -51,7 +50,6 @@ public class LoginActivity extends AppCompatActivity {
         tvSignUp=findViewById(R.id.haveAccountTv);
 
         ////pour google
-        mFirebaseAuth= FirebaseAuth.getInstance();
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -74,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
                 FirebaseUser mFireBaseUser=mFirebaseAuth.getCurrentUser();
                 if(mFireBaseUser != null){
                     Toast.makeText(LoginActivity.this,"you are logged in",Toast.LENGTH_SHORT).show();
-                    Intent i= new Intent(LoginActivity.this,prayers.class);
+                    Intent i= new Intent(LoginActivity.this, PrayersEvents.class);
                     startActivity(i);
                 }
                 else{
@@ -107,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             }
                             else{
-                                Intent intoHome=new Intent(LoginActivity.this,prayers.class);
+                                Intent intoHome=new Intent(LoginActivity.this, PrayersEvents.class);
                                 startActivity(intoHome);
                             }
                         }
@@ -134,9 +132,8 @@ public class LoginActivity extends AppCompatActivity {
 
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
         if(account !=null){
-            startActivity(new Intent(LoginActivity.this,prayers.class));
+            startActivity(new Intent(LoginActivity.this, CreateEvent.class));
         }
-        super.onStart();
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -171,9 +168,8 @@ public class LoginActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("MON_TAG", "signInWithCredential:success");
                             FirebaseUser user = mFirebaseAuth.getCurrentUser();
-                            startActivity(new Intent(LoginActivity.this,prayers.class));
-                            finish();
-                            Toast.makeText(getApplicationContext(),"You are now connected",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginActivity.this, CreateEvent.class));
+                          Toast.makeText(getApplicationContext(),"You are now connected",Toast.LENGTH_SHORT).show();
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(getApplicationContext(),"Could not log in user",Toast.LENGTH_SHORT).show();

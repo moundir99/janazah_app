@@ -9,7 +9,17 @@
     <string name="salamou_alaykoum">salamou \'alaykoum</string>
     <string name="logout">Logout</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_maps">Map</string>
+
+        <!-- TODO: Remove or change this placeholder text -->
+        <string name="hello_blank_fragment">Hello blank fragment</string>
+        <string name="title_activity_maps">Map</string>
+        <string name="button">Button</string>
+        <string name="title_activity_select_mosque">Map</string>
+    <string-array name="prayers_">
+        <item>Fajr</item>
+        <item>Dohr</item>
+        <item>Asr</item>
+        <item>Maghreb</item>
+        <item>Isha</item>
+    </string-array>
 </resources>
