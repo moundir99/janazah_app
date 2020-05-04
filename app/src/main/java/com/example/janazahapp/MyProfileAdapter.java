@@ -15,14 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyHolder> implements Filterable {
+public class MyProfileAdapter extends RecyclerView.Adapter<MyHolder> implements Filterable {
 
     Context c;
     ArrayList<Model> models,filterList;
     CustomerFile filter;
 
 
-    public MyAdapter(Context c, ArrayList<Model> models) {
+    public MyProfileAdapter(Context c, ArrayList<Model> models) {
         this.c = c;
         this.models = models;
         this.filterList = models;
@@ -57,9 +57,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> implements Filtera
                 String description_ =  models.get(position).getDescription();
                 String prayerDay_ =  models.get(position).getPrayer();
                 String id=models.get(position).getId();
-
-
-                // il faut ajouter la description mais celui ci ne se trouvait pas dans le activity_card donc il faut la get a partir de la base de données
+                Log.d("profileAdapter", "id: "+ id);
+                // il faut ajouter la description mais celle-ci ne se trouvait pas dans le activity_card donc il faut la get a partir de la base de données
 
                 Intent intent  = new  Intent(c, AnotherProfileActivity.class);
                 intent.putExtra("nameDead",name_);
@@ -85,8 +84,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> implements Filtera
     public Filter getFilter() {
 
         if(filter == null){
+            //i removed filter for the moment cuz it don't work
 
-            filter = new CustomerFile(filterList,this);
+            //filter = new CustomerFile(filterList,this);
         }
         return filter;
     }

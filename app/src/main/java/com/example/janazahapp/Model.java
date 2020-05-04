@@ -7,7 +7,22 @@ import android.widget.RelativeLayout;
 
 public class Model {
 
-    private String name, mosque,participate,prayer,NbParticipants,description;
+    private String name;
+    private String mosque;
+    private String participate;
+    private String prayer;
+    private String NbParticipants;
+    private String description;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     private Button btn;
     private RelativeLayout card;
 

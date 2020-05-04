@@ -90,6 +90,7 @@ public class PrayersEvents extends AppCompatActivity {
                     String description = snapshot.child("descriptionPrayer").getValue().toString();
                     String nameDead  = snapshot.child("nameDead").getValue().toString();
                     String mosqueAdress = snapshot.child("chooseMosque").getValue().toString();
+                    String id=snapshot.getKey();
                     Log.d("Files", " données de Firebase " + authorName  + " " + prayer + " " + description + " " + nameDead +" "+mosqueAdress );
 
                     // remplissage Arraylist models
@@ -99,6 +100,9 @@ public class PrayersEvents extends AppCompatActivity {
                     e.setPrayer(prayer);
                     e.setNbParticipants("0");
                     e.setDescription(description);
+                    e.setId(id);
+                    Log.d("prayersEvents", "id: "+ id);
+
                     models.add(e);
 
                 }
